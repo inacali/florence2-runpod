@@ -5,11 +5,14 @@ WORKDIR /app
 # Install Python deps
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir \
-        "transformers[torch]>=4.45.0" \
+        "transformers[torch]==4.44.2" \
         accelerate \
+        timm \
+        einops \
         fastapi \
         "uvicorn[standard]" \
         pillow
+
 
 # Copy app code
 COPY app.py /app/app.py
