@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from PIL import Image
 from transformers import AutoProcessor, AutoModelForCausalLM
 
-MODEL_ID = "florence-community/Florence-2-large"
+MODEL_ID = "microsoft/Florence-2-large"
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 torch_dtype = torch.float16 if device == "cuda" else torch.float32
